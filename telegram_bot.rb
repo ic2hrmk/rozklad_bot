@@ -61,7 +61,8 @@ module Rozklad
   end
 
   def self.parse_user_input input
-    return input.downcase.split
+    input.downcase!
+    return input.split
   end
 
   private
@@ -96,13 +97,15 @@ end
 
 Telegram::Bot::Client.run TOKEN do |bot|
   bot.listen do |message|
-    parsed_comand = Rozklad::parse_user_input message.text
-    if parsed_comand[0] == '/start'
-      bot.api.send_message(chat_id: message.chat.id, text: "Доброго дня, #{message.from.first_name}!\n/group - отримати інформацію по групах")
-    elsif parsed_comand[0] == '/group'
-      bot.api.send_message(chat_id: message.chat.id, text: Rozklad::student_schedule(parsed_comand), parse_mode: 'HTML')
-    else
-      bot.api.send_message(chat_id: message.chat.id, text: "Мені шкода, але я не зрозумів Вашу команду...")
+    if !message.text.nil?
+      parsed_comand = Rozklad::parse_user_input message.text
+      if parsed_comand[0] == '/start'
+        bot.api.send_message(chat_id: message.chat.id, text: "Доброго дня, #{message.from.first_name}!\n/group - отримати інформацію по групах")
+      elsif parsed_comand[0] == '/group'
+        bot.api.send_message(chat_id: message.chat.id, text: Rozklad::student_schedule(parsed_comand), parse_mode: 'HTML')
+      else
+        bot.api.send_message(chat_id: message.chat.id, text: "Мені шкода, але я не зрозумів Вашу команду...")
+      end
     end
   end
 end
