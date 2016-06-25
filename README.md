@@ -1,6 +1,6 @@
 # rozklad_bot
 ### Telegram's bot for requesting schedule from api.rozklad.kpi.ua
-[Link in Telegram](https://telegram.me/rozklad_bot "Telegram link") or by name @rozklad_bot
+[Link in Telegram](https://telegram.me/rozklad_bot "Telegram link") or by name @rozklad_bot  
 Author: Roman Kaporin
 It allows to get Information about KPI schedule from api.rozklad.kpi.ua by simple commands.
 
