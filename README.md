@@ -10,7 +10,7 @@ There are two available commands:
 **_/start_** - Start command that shows all available commands.  
 **_/group_** *group [day - optional]* - Command has to parameters:
 * _group_ **REQUIRED** - Name of group. It consists of literal code of group and it's number. For example: іс-32 or IS-32.
-* _day_ **OPTIONAL** - Name of day from schedule. It should be provided in ukrainian as full name of the day (eg. _понеділок_) or in short form (eg. _пн_). In case if day wasn't provided, bot returns schedule for all week.
+* _day_   **OPTIONAL** - Name of day from schedule. It should be provided in ukrainian as full name of the day (eg. _понеділок_) or in short form (eg. _пн_). In case if day wasn't provided, bot returns schedule for all week.
 
 _Day and group name are available for swapping._   
 
