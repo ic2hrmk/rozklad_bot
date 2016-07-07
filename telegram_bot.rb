@@ -1,6 +1,6 @@
 require 'telegram/bot'
 
-TOKEN = '230213563:AAHJRBX4vBjomVT0gwKx6PTUL0U1vJpKA7w'
+TOKEN = ''
 
 module Rozklad
   require 'json'
