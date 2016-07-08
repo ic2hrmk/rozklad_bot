@@ -10,7 +10,7 @@ token.txt
 /test/tmp/
 /test/version_tmp/
 /tmp/
-
+authorization.rb
 # Used by dotenv library to load environment variables.
 # .env
 
